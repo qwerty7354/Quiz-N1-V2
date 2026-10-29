@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for book in book_items %}
+    <p>{{ book.title }} — {{ book.pages }} გვერდი</p>
+
+    {% if book.pages > 300 %}
+        <p>გრძელია</p>
+    {% else %}
+        <p>მოკლეა</p>
+    {% endif %}
+
+{% endfor %}
+
+{% endblock %}
